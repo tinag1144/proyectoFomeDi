@@ -1,0 +1,111 @@
+:root {
+  --mainColor: #197a87;
+  --black: #c1d3e68c;
+  --white: #ffffff;
+  --shadow: 0px 4px 8px rgba(42, 183, 202, 0.2);
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--black);
+  margin: 0;
+  padding: 0;
+}
+
+.turno-form {
+  max-width: 600px;
+  margin: 60px auto;
+  background-color: var(--white);
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.turno-form h2 {
+  text-align: center;
+  color: var(--mainColor);
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.especialidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.especialidad {
+  background-color: var(--white);
+  color: var(--mainColor);
+  border: 2px solid var(--mainColor);
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.especialidad:hover,
+.especialidad.selected {
+  background-color: var(--mainColor);
+  color: var(--white);
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: #f4f8fa;
+  color: #2c3e50;
+  font-family: 'Lato', sans-serif;
+}
+
+.btn {
+  margin-top: 30px;
+  width: 100%;
+  background-color: var(--mainColor);
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #145e6a;
+}
+
+.hidden {
+  display: none;
+}
+/* ...todo el CSS anterior permanece igual... */
+
+.confirmacion {
+  padding: 15px;
+  background-color: #d4f7e1;
+  color: #256029;
+  border: 1px solid #a8e6b6;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}

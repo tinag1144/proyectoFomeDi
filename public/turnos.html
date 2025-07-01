@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pedir Turno</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/turnos.css" />
+</head>
+<body>
+
+  <section class="turno-form">
+    <h2>Solicitar Turno Médico</h2>
+    
+    <!-- Mensaje de confirmación -->
+    <div id="mensaje-confirmacion" class="confirmacion hidden">
+      ✅ ¡Turno solicitado con éxito! En breve recibirás la confirmación por correo o WhatsApp.
+    </div>
+
+    <form id="form-turno">
+      <!-- Selección de especialidad -->
+      <div class="form-group">
+        <label for="especialidad">Especialidad</label>
+        <div class="especialidades">
+          <button type="button" class="especialidad" data-especialidad="clinica">Clínica Médica</button>
+          <button type="button" class="especialidad" data-especialidad="pediatria">Pediatría</button>
+          <button type="button" class="especialidad" data-especialidad="cardiologia">Cardiología</button>
+          <button type="button" class="especialidad" data-especialidad="dermatologia">Dermatología</button>
+          <button type="button" class="especialidad" data-especialidad="ginecologia">Ginecología</button>
+        </div>
+      </div>
+
+      <div class="form-group hidden" id="doctor-group">
+        <label for="doctor">Profesional disponible</label>
+        <select id="doctor" name="doctor">
+          <option value="" disabled selected>Seleccionar un médico</option>
+        </select>
+      </div>
+
+      <div class="form-group hidden" id="turno-group">
+        <label for="horario">Fechas y horarios disponibles</label>
+        <select id="horario" name="horario">
+          <option value="" disabled selected>Seleccionar horario</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn">Confirmar Turno</button>
+    </form>
+  </section>
+
+  <script src="assets/js/turnos.js"></script>
+</body>
+</html>
