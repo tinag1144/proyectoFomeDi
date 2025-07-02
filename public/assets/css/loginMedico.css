@@ -1,0 +1,156 @@
+/* doctor.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #e0f7fa; /* color clarito hospitalario */
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: #004d40;
+  padding: 15px 30px;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #1de9b6;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+ul li a:hover {
+  color: #1de9b6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.full-screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.left h2 {
+  font-size: 2.5rem;
+  color: #004d40;
+}
+
+.left span {
+  color: #1de9b6;
+}
+
+.left p {
+  margin: 10px 0;
+}
+
+.btn {
+  background-color: #004d40;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #00695c;
+}
+
+/* FORMULARIO */
+
+.form {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 77, 64, 0.2);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form .heading {
+  font-size: 1.8rem;
+  color: #004d40;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-style {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  background: #f9f9f9;
+  font-size: 1rem;
+}
+
+.input-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #004d40;
+}
+
+.link {
+  font-size: 0.9rem;
+  color: #004d40;
+  text-decoration: underline;
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .full-screen {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  .form {
+    margin-top: 30px;
+  }
+}

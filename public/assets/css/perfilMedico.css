@@ -1,0 +1,210 @@
+/* ===========================
+  PANEL DEL DOCTOR - CSS PRO
+  =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap');
+
+:root {
+  --mainColor: #197a87;
+  --secondaryColor: #145e66;
+  --bgColor: #e6f3f5;
+  --white: #ffffff;
+  --textDark: #2c3e50;
+  --textGray: #6b7b8a;
+  --shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--bgColor);
+  color: var(--textDark);
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: var(--mainColor);
+  padding: 30px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: var(--shadow);
+}
+
+.sidebar .logo {
+  color: var(--white);
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.sidebar .logo span {
+  color: #b2ebf2;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar nav ul li a {
+  color: var(--white);
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.2s;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+  background-color: var(--secondaryColor);
+}
+
+.dashboard {
+  margin-left: 250px;
+  padding: 40px;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1, h2, h4 {
+  color: var(--textDark);
+}
+
+p, li {
+  color: var(--textGray);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.paciente-info {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h4 {
+  margin-bottom: 10px;
+  color: var(--mainColor);
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+.btn {
+  background-color: var(--mainColor);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  align-self: flex-start;
+}
+
+.btn:hover {
+  background-color: var(--secondaryColor);
+}
+
+.section {
+  display: none;
+  animation: fade .4s ease-in-out;
+}
+
+.section.visible {
+  display: block;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+ul li {
+  margin-bottom: 6px;
+}
+
+/* Scrollbar para listas si hay muchos ítems */
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: var(--secondaryColor);
+  border-radius: 10px;
+}
+
+/* Ajuste para inputs y textarea en móvil o pantalla chica */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+}

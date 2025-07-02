@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel del Doctor</title>
+  <link rel="stylesheet" href="../public/assets/css/perfilMedico.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h2 class="logo">Fo<span>Medi</span></h2>
+    <nav>
+      <ul>
+        <li><a href="#" data-section="pacientes">📋 Pacientes</a></li>
+        <li><a href="#" data-section="turnos">🕓 Mis Turnos</a></li>
+        <li><a href="#" data-section="dias">📅 Días de Trabajo</a></li>
+        <li><a href="#" data-section="cancelaciones">❌ Cancelaciones</a></li>
+        <li><a href="#" data-section="inasistencias">🚫 Inasistencias</a></li>
+        <li><a href="#" data-section="configuracion">⚙️ Configuración</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="dashboard">
+    <div class="container">
+
+     <section id="pacientes" class="section visible">
+  <h1 id="bienvenida">Bienvenid@ Dr.</h1>
+
+  <div class="paciente-info">
+    <h2>Paciente Actual</h2>
+    <p><strong>Nombre:</strong> Agostina Pérez</p>
+    <p><strong>Edad:</strong> 20 años</p>
+    <p><strong>DNI:</strong> 12345678</p>
+    <p><strong>Afiliación:</strong> Obra Social Ejemplo</p>
+  </div>
+
+  <div class="grid">
+
+    <!-- Diagnósticos -->
+    <div class="card">
+      <h4>Diagnóstico</h4>
+      <ul id="lista-diagnosticos">
+        <!-- Diagnósticos se agregan aquí dinámicamente -->
+      </ul>
+      <textarea id="input-diagnostico" rows="3" placeholder="Agregar nuevo diagnóstico..."></textarea>
+      <button id="btn-agregar-diagnostico" class="btn">Agregar Diagnóstico</button>
+    </div>
+
+    <!-- Estudios -->
+    <div class="card">
+      <h4>Estudios Recientes</h4>
+      <ul id="lista-estudios">
+        <!-- Estudios se agregan aquí dinámicamente -->
+      </ul>
+      <textarea id="input-estudio" rows="3" placeholder="Agregar nuevo estudio..."></textarea>
+      <button id="btn-agregar-estudio" class="btn">Agregar Estudio</button>
+    </div>
+
+    <!-- Medicamentos -->
+    <div class="card">
+      <h4>Medicamentos</h4>
+      <ul id="lista-medicamentos">
+        <!-- Medicamentos se agregan aquí dinámicamente -->
+      </ul>
+      <textarea id="input-medicamento" rows="3" placeholder="Agregar nuevo medicamento..."></textarea>
+      <button id="btn-agregar-medicamento" class="btn">Agregar Medicamento</button>
+    </div>
+
+    <!-- Notas del Médico -->
+    <div class="card">
+      <h4>Notas del Médico</h4>
+      <textarea id="input-nota" rows="4" placeholder="Escribir nota para el historial..."></textarea>
+      <button id="btn-guardar-nota" class="btn">Guardar Nota</button>
+      <ul id="lista-notas">
+        <!-- Notas se agregan aquí dinámicamente -->
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+      <section id="turnos" class="section">
+        <h2>Mis Turnos</h2>
+        <p>Visualizá y gestioná tus turnos del día.</p>
+        <p>🔸 Turno con Agostina Pérez - 14:30 hs</p>
+        <p>🔸 Turno con Carlos Ríos - 15:00 hs</p>
+      </section>
+
+      <section id="dias" class="section">
+        <h2>Días de Trabajo</h2>
+        <ul>
+          <li>Lunes - 08:00 a 16:00</li>
+          <li>Miércoles - 08:00 a 12:00</li>
+          <li>Viernes - 10:00 a 18:00</li>
+        </ul>
+      </section>
+
+      <section id="cancelaciones" class="section">
+        <h2>Turnos Cancelados</h2>
+        <p>🔻 Juan Martínez - Cancelado por paciente</p>
+        <p>🔻 Laura Torres - Cancelado por médico</p>
+      </section>
+
+      <section id="inasistencias" class="section">
+        <h2>Inasistencias</h2>
+        <p>❗Carlos Ríos - No asistió al turno del 20/06</p>
+        <p>❗Valeria Núñez - No asistió al turno del 18/06</p>
+      </section>
+
+      <section id="configuracion" class="section">
+        <h2>Configuración</h2>
+        <p>🔧 Cambiar contraseña, editar perfil, notificaciones.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="../public/assets/js/perfilMedico.js"></script>
+</body>
+</html>

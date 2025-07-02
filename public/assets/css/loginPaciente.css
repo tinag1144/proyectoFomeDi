@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-    --mainColor: #197a87; /* celeste hospitalario */
+    --mainColor: #35757e; /* celeste hospitalario */
     --black: #c1d3e68c; /* gris muy claro tipo fondo hospital */
     --white: #FFFFFF;
-    --whiteSmoke: #6b7b8a; /* gris azulado para textos suaves */
+    --whiteSmoke: #d6e5f3; /* gris azulado para textos suaves */
     --shadow: 0px 4px 8px 0 rgba(42, 183, 202, 0.2); /* sombra celeste suave */
 }
 
@@ -16,10 +16,13 @@ body {
     font-size: 16px;
     letter-spacing: 1px;
     font-weight: normal;
-    background-color: var(--black);
+    background-color: #242e36;
 }
 
-a { text-decoration: none; }
+a { 
+    text-decoration: none;
+}
+
 ul { list-style: none; }
 .container { max-width: 1080px; margin: auto; }
 .row { display: flex; flex-wrap: wrap; }
@@ -38,14 +41,30 @@ nav {
     padding: 25px;
 }
 
-nav .logo { color: var(--white); font-size: 32px; font-weight: 600; text-transform: capitalize; }
-nav .logo span { color: var(--mainColor); }
-nav .container { padding: 0 25px; }
-nav .menu-btn i { color: var(--white); font-size: 28px; cursor: pointer; display: none; }
-nav ul { display: flex; flex-wrap: wrap; }
-nav ul li { margin: 0 5px; }
+nav .logo { color: black;
+     font-size: 32px; 
+     font-weight: 600;
+      text-transform: capitalize;
+}
+nav .logo span { color: var(--mainColor); 
+}
+nav .container { padding: 0 25px; 
+}
+nav .menu-btn i { 
+    color: var(--white);
+    font-size: 28px; 
+    cursor: pointer; 
+    display: none; 
+}
+nav ul { 
+    display: flex; 
+    flex-wrap: wrap; 
+}
+nav ul li { 
+    margin: 0 5px; 
+}
 nav ul li a { 
-    color: var(--white); 
+    color: black; 
     font-size: 16px; 
     font-weight: 600; 
     padding: 8px 15px;
@@ -61,10 +80,13 @@ nav ul li a:hover {
 /*MAIN*/
 
 .left, .right { flex: 0 0 50%; max-width: 50%; padding: 20px; }
+.left h2{
+    color: #777;
+}
 .left .line { width: 15%; height: 2px; background-color: var(--mainColor); display: inline-block; }
-.left h2 { margin-top: 25px; font-size: 50px; color: #2c3e50; line-height: 55px; }
 .left h2 span { color: var(--mainColor); font-size: 52px; }
 .left p { color: var(--whiteSmoke); font-size: 16px; margin-top: 20px; margin-bottom: 10px; }
+
 
 .btn {
     height: 44px;
@@ -103,7 +125,7 @@ nav ul li a:hover {
 
 .form { width: 100%; display: flex; justify-content: center; }
 .right h4 { font-weight: 600; color: #2c3e50; }
-.right h6 { color: #2c3e50; margin-bottom: 30px; } 
+.right h6 { color: #85a4c4; margin-bottom: 30px; } 
 .right h6 span { padding: 0 20px; text-transform: uppercase; font-weight: 700; font-size: 16px; }
 
 input[type="checkbox"] { display: none; }
@@ -174,7 +196,7 @@ input[type="checkbox"] { display: none; }
 .card-front, .card-back { 
     width: 100%; 
     height: 100%;
-    background-color: #c5deff;
+    background-color: #5d6f86;
     background-image: none;
     position: absolute;
     border-radius: 6px;
